@@ -14,9 +14,8 @@
 }
 .sidebar{
     width: 250px;
-    // min-height: 94vh;
-    height: 100vh;
-    // height: inherit;
+    min-height: 94vh;
+    height: inherit;
     // background-color: #f7f8f9;
 }
 .sidebar.collapse {
