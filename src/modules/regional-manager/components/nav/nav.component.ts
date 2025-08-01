@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterOutlet } from '@angular/router'; 
-import {MatIconModule} from '@angular/material/icon'
+import { MatIconModule } from '@angular/material/icon';
+import { RouterLink, RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-manager-nav',
+  selector: 'app-nav',
   imports: [RouterOutlet,RouterLink,MatIconModule],
-  templateUrl: './manager-nav.component.html',
-  styleUrl: './manager-nav.component.scss'
+  templateUrl: './nav.component.html',
+  styleUrl: './nav.component.scss'
 })
-export class ManagerNavComponent {
-
+export class NavComponent {
+  
   ngAfterViewInit() {
     const sidebar = document.getElementById('sidebar');
     const toggleButton = document.getElementById('toggleSidebar');

@@ -4,12 +4,20 @@ import { HomeComponent } from './components/home/home.component';
 import { ManageFieldmembersComponent } from './components/manage-fieldmembers/manage-fieldmembers.component';
 import { ManageSchedulesComponent } from './components/manage-schedules/manage-schedules.component';
 import { ManageStoresComponent } from './components/manage-stores/manage-stores.component';
+import { NavComponent } from './components/nav/nav.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'manage-field-members', component: ManageFieldmembersComponent },
-  { path: 'manage-schedules', component: ManageSchedulesComponent },
-  { path: 'manage-stores', component: ManageStoresComponent },
+
+  {
+    path: '',
+    component: NavComponent,
+    children: [
+      { path: '', component: HomeComponent },
+      { path: 'manage-field-members', component: ManageFieldmembersComponent },
+      { path: 'manage-schedules', component: ManageSchedulesComponent },
+      { path: 'manage-stores', component: ManageStoresComponent },
+    ]
+  }
   
 ];
 
