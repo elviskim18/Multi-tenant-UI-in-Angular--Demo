@@ -1,1 +1,54 @@
-<p>expiry-task works!</p>
+<div class="container-fluid ps-5 pt-3">
+    <div class="">
+      <div class="fs-3">Expiry</div>
+    <div class="pt-2 text-body-tertiary s-font">Please complete the fields below to submit the expiry report.</div>
+    </div>
+   
+
+    <div class="mt-5  rounded">
+        <form>
+            <div class="mb-4">
+                <label for="store" class="form-label">Select Store</label>
+                <select class="form-select" id="store" aria-label="Default select example">
+                    <option class="text-body-secondary" selected>Open this select menu</option>
+                    <option value="1">Quickmart Avenue, Nairobi</option>
+                    <option value="2">Tesco Central, Nairobi</option>
+                    <option value="3">Carrefour Highway, Nairobi</option>
+                </select>
+            </div>
+
+            <div class="mb-4">
+                <label for="product" class="form-label">Product Name</label>
+                <input type="text" class="form-control" id="product" placeholder="Product Name">
+            </div>
+            
+        
+            <div class="mb-4">
+                <label for="date" class="form-label">Expiry Date</label>
+                <input type="date" class="form-control" id="date">
+            </div>
+            <div class="mb-4">
+                <label for="quantity" class="form-label">Quantity</label>
+                <input type="number" class="form-control" id="quantity" placeholder="Quantity">
+            </div>
+       
+            <div class="mb-4">
+                <label for="store" class="form-label">Action Taken</label>
+                <select class="form-select" id="store" aria-label="Default select example">
+                    <option class="text-body-secondary" selected>Open this select menu</option>
+                    <option value="1">Return to HQ</option>
+                    <option value="2">Product Consumed</option>
+                    <option value="3">None</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Additional Details</label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            </div>
+            <div class="w-100">
+                <button type="submit" class="btn btn-primary w-100 py-3">Submit</button>
+            </div>
+        </form>
+        
+    </div>
+</div>
