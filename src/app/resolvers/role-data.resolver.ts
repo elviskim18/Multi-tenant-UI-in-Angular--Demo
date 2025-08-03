@@ -4,9 +4,13 @@ import { RoleDataService } from '../services/role-data.service';
 import { AuthenticationService } from '../services/authentication.service';
 
 export const roleDataResolver: ResolveFn<any> = (route, state) => {
-  let  roleDataService:RoleDataService= inject(RoleDataService);
+  console.log(route.data)
   let auth: AuthenticationService = inject(AuthenticationService);
 
   const role = auth.getRole() ?? '';
-  return roleDataService.getData(role);
+  console.log(role)
+  return inject(RoleDataService).getData(role);
 };
+
+
+

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterOutlet } from '@angular/router';
+import { AuthenticationService } from './services/authentication.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,15 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'multi-tenany-demo';
+  title = 'multi-tenant-demo';
+  authService: AuthenticationService = inject(AuthenticationService);
+  router: Router = inject(Router);
+
+  ngOnInit() {
+    const role = this.authService.getRole();
+    if (!role) {
+      this.router.navigate(['/login']);
+    }
+  }
+
 }

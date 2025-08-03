@@ -1,6 +1,6 @@
 <div class="container-fluid ps-5 pt-3">
     <div class="">
-      <div class="fs-3">Stores</div>
+      <div class="fs-3">Field Members</div>
       <div class="pt-2 text-body-tertiary s-font ">Manager your team members</div>
     </div>
    
@@ -18,24 +18,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <th scope="row">1</th>
-                        <td class="text-secondary">Bruno Mars</td>
-                        <td class="text-secondary">25</td>
+                    <tr *ngFor="let member of data.field_members; let i = index" class="">
+                        <th scope="row">{{i +1}}</th>
+                        <td class="text-secondary">{{member.name}}</td>
+                        <td class="text-secondary">{{member.assignedStores}}</td>
                         <td ><button class="btn btn-outline-primary btn-sm">Manage</button></td>
                     </tr>
-                     <tr class="">
-                        <th scope="row">2</th>
-                        <td class="text-secondary">Mary Jane</td>
-                        <td class="text-secondary">10</td>
-                        <td ><button class="btn btn-outline-primary btn-sm">Manage</button></td>
-                    </tr>
-                     <tr class="">
-                        <th scope="row">3</th>
-                        <td class="text-secondary">Peter Pan</td>
-                        <td class="text-secondary">15</td>
-                        <td ><button class="btn btn-outline-primary btn-sm">Manage</button></td>
-                    </tr>
+                   
                 </tbody>
             </table>
     

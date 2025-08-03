@@ -1,12 +1,26 @@
 import { Component } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
+import { regionalManager } from '../../../../app/models/platform-model';
+import { ActivatedRoute } from '@angular/router';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
-  imports: [MatIconModule],
+  imports: [MatIconModule,CommonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent {
+  data!: regionalManager;
+
+  constructor(private route: ActivatedRoute) {
+
+  }
+
+  ngOnInit(): void {
+   this.data = this.route.snapshot.data['roleData']
+   console.log(this.data)
+   
+  }
 
 }

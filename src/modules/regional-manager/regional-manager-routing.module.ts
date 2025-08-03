@@ -5,6 +5,7 @@ import { ManageFieldmembersComponent } from './components/manage-fieldmembers/ma
 import { ManageSchedulesComponent } from './components/manage-schedules/manage-schedules.component';
 import { ManageStoresComponent } from './components/manage-stores/manage-stores.component';
 import { NavComponent } from './components/nav/nav.component';
+import { roleDataResolver } from '../../app/resolvers/role-data.resolver';
 
 const routes: Routes = [
 
@@ -12,10 +13,10 @@ const routes: Routes = [
     path: '',
     component: NavComponent,
     children: [
-      { path: '', component: HomeComponent },
-      { path: 'manage-field-members', component: ManageFieldmembersComponent },
-      { path: 'manage-schedules', component: ManageSchedulesComponent },
-      { path: 'manage-stores', component: ManageStoresComponent },
+      { path: '', component: HomeComponent,  },
+      { path: 'manage-field-members', component: ManageFieldmembersComponent, resolve: { roleData: roleDataResolver } },
+      { path: 'manage-schedules', component: ManageSchedulesComponent,resolve: { roleData: roleDataResolver } },
+      { path: 'manage-stores', component: ManageStoresComponent, resolve: { roleData: roleDataResolver } },
     ]
   }
   

@@ -18,24 +18,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
+                    <tr *ngFor="let schedule of data.schedules; let i = index" class="">
                         <th scope="row">1</th>
-                        <td class="text-secondary">Tesco Central</td>
+                        <td class="text-secondary">{{schedule.name}}</td>
                         <td ><button class="btn btn-outline-primary btn-sm">View</button></td>
                         <td ><button class="btn btn-outline-secondary btn-sm">Manage</button></td>
                     </tr>
-                     <tr class="">
-                        <th scope="row">2</th>
-                        <td class="text-secondary">Tesco Highway</td>
-                        <td ><button class="btn btn-outline-primary btn-sm">View</button></td>
-                        <td ><button class="btn btn-outline-secondary btn-sm">Manage</button></td>
-                    </tr>
-                     <tr class="">
-                        <th scope="row">3</th>
-                        <td class="text-secondary">Quickmart Avenue</td>
-                        <td ><button class="btn btn-outline-primary btn-sm">View</button></td>
-                        <td ><button class="btn btn-outline-secondary btn-sm">Manage</button></td>
-                    </tr>
+                  
                 </tbody>
             </table>
     

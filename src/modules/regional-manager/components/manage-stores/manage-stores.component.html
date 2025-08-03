@@ -18,24 +18,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <th scope="row">1</th>
-                        <td class="text-secondary">Naivas</td>
-                        <td class="text-secondary">Bruno Mars</td>
+                    <tr *ngFor="let store of data.stores; let i = index" class="">
+                        <th scope="row">{{i +1}}</th>
+                        <td class="text-secondary">{{store.name}}</td>
+                        <td class="text-secondary">{{store.assignedMember}}</td>
                         <td ><button class="btn btn-outline-primary btn-sm">Manage</button></td>
                     </tr>
-                     <tr class="">
-                        <th scope="row">2</th>
-                        <td class="text-secondary">Quickmart</td>
-                        <td class="text-secondary">Mary Jane</td>
-                        <td ><button class="btn btn-outline-primary btn-sm">Manage</button></td>
-                    </tr>
-                     <tr class="">
-                        <th scope="row">3</th>
-                        <td class="text-secondary">Tesco</td>
-                        <td class="text-secondary">Peter Pan</td>
-                        <td ><button class="btn btn-outline-primary btn-sm">Manage</button></td>
-                    </tr>
+                 
                 </tbody>
             </table>
     

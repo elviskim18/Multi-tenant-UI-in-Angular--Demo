@@ -19,26 +19,12 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <th scope="row">1</th>
-                        <td class="text-secondary">John Doe</td>
-                        <td class="text-secondary">Nakuru</td>
+                    <tr *ngFor="let manager of data.managers; let i = index" class="">
+                        <th scope="row">{{i +1}}</th>
+                        <td class="text-secondary">{{manager.name}}</td>
+                        <td class="text-secondary">{{manager.region}}</td>
                         <td ><button class="btn btn-outline-secondary btn-sm">Edit</button></td>
                         <td ><button class="btn btn-outline-warning btn-sm">Delete</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td class="text-secondary">Bien Aime</td>
-                        <td class="text-secondary">Kakamega</td>
-                        <td ><button class="btn btn-outline-secondary btn-sm">Edit</button></td>
-                        <td ><button class="btn btn-outline-warning btn-sm">Delete</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td class="text-secondary">Coster Ojwang</td>
-                        <td class="text-secondary">Kisumu</td>
-                        <td ><button class="btn btn-outline-secondary btn-sm">Edit</button></td>
-                        <td ><button class="btn btn-outline-warning btn-sm">Delete</button></td>                        
                     </tr>
                 </tbody>
             </table>

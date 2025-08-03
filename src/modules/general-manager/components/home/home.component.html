@@ -1,6 +1,6 @@
 <div class="container-fluid ps-5 pt-3">
     <div class="">
-      <div class="fs-3">Hello <span class="text-uppercase">Aloo</span>  👋</div>
+      <div class="fs-3">Hello <span class="text-uppercase">{{data.name}}</span>  👋</div>
       <div class="pt-2 text-body-tertiary s-font ">Monitor team performance and track daily operations</div>
     </div>
     <div class="row mt-3 ">
@@ -16,7 +16,7 @@
                 </svg>
               </div>
               <div class="s-font text-body-secondary mt-3">Top Perfoming region</div>
-              <div class="fs-5 fw-bold text-body-secondary">Nairobi</div>
+              <div class="fs-5 fw-bold text-body-secondary">{{data.top_performing_region}}</div>
                 
             </div>
         </div>
@@ -35,7 +35,7 @@
                 <div class="s-font text-body-secondary">Total Order Value</div>
                 <div class="s-font text-success">Today</div>
               </div>
-              <div class="fs-5 fw-bold text-body-secondary">570,000</div>
+              <div class="fs-5 fw-bold text-body-secondary">{{data.total_order_value}}</div>
                 
             </div>
         </div>
@@ -58,7 +58,7 @@
                 <div class="s-font text-body-secondary">Order Target</div>
                 <div class="s-font text-success">This Month</div>
               </div>
-              <div class="fs-5 fw-bold text-body-secondary">20000</div>
+              <div class="fs-5 fw-bold text-body-secondary">{{data.monthly_order_target}}</div>
                 
             </div>
         </div>
@@ -74,7 +74,7 @@
                 <div class="s-font text-body-secondary">Outlet Visitations</div>
                 <div class="s-font text-success">Today</div>
               </div>
-              <div class="fs-5 fw-bold text-body-secondary">400</div>
+              <div class="fs-5 fw-bold text-body-secondary">{{data.total_outlet_visitations}}</div>
                 
             </div>
         </div>
@@ -98,24 +98,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="">
-                        <th scope="row">1</th>
-                        <td class="text-secondary">Nakuru</td>
-                        <td class="text-secondary">John Doe</td>
+                    <tr *ngFor="let region of data.regions; let i = index" class="">
+                        <th scope="row">{{i +1}}</th>
+                        <td class="text-secondary">{{region.name}}</td>
+                        <td class="text-secondary">{{region.manager}}</td>
                         <td ><button class="btn btn-primary btn-sm">View</button></td>
                     </tr>
-                    <tr>
-                        <th scope="row">2</th>
-                        <td class="text-secondary">Kakamega</td>
-                        <td class="text-secondary">Bien Aime</td>
-                        <td><button class="btn btn-primary btn-sm">View</button></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">3</th>
-                        <td class="text-secondary">Kisumu</td>
-                        <td class="text-secondary">Coster Ojwang</td>
-                        <td ><button class="btn btn-primary btn-sm">View</button></td>
-                    </tr>
+                    
                 </tbody>
             </table>
     
